@@ -1,15 +1,15 @@
 **PRE:**
 PDU (capas):
-1 bits
-2 tramas
-3 paquetes
-4 segmento
-5-6-7 datos
+- 1 bits
+- 2 tramas
+- 3 paquetes
+- 4 segmento
+- 5-6-7 datos
 
 Dispositivos:
-Capa 3: Un dominio de colisión por cada conexión y un dominio broadcast por cada conexión.
-Capa 2: Un dominio de colisión por cada conexión.
-Capa 1: Un dominio de colisión para todas sus conexiones.
+- Capa 3: Un dominio de colisión por cada conexión y un dominio broadcast por cada conexión.
+- Capa 2: Un dominio de colisión por cada conexión.
+- Capa 1: Un dominio de colisión para todas sus conexiones.
 
 Ejemplos:
 1 solo dominio broadcast, 1 solo dominio de colisión:
@@ -33,6 +33,7 @@ Asignación de puertos por grupo + individual a VLAN:
 ![Asignación de puertos por grupo + individual a VLAN](../imgs/Sem5_img6.jpg)
 
 **COMANDOS:**
+
 `do` -> cuando estés en config global y quieras ejecutar
 
 `show vlan brief` -> muestra el estado de las VLAN
@@ -71,6 +72,7 @@ Asignación de puertos por grupo + individual a VLAN:
 
 `line vty 0 4 + password {passw}` -> contraseña para el acceso remoto
 
+
 Cuando se le asigna una IP a un switch: cuando quieras trabajarlo de forma remota (debes configurar ambos IP y el gateway).
 
 Telnet utiliza el puerto 23.
@@ -91,6 +93,7 @@ SSH utiliza el puerto 22.
 **Enlace troncal:** permite comunicar VLANs del mismo tipo, viajan con una etiqueta que le da la VLAN.
 
 En cable giga, entre switches se usa: 
+
 `switchport mode trunk`
 
 `switchport trunk allowed vlan 15,25,35`
@@ -105,4 +108,5 @@ Solo se configura IP a las interfaces, subinterfaces y SVIs.
 A un puerto no se le asigna IP.
 
 Escalar puerto a interfaz: `no switchport`
+
 Escalar el switch a capa 3: `ip routing`
